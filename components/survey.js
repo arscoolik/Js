@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import {Text, TouchableWithoutFeedbackComponent, View, Image, TextInput, Button} from 'react-native';
+import {Text, TouchableWithoutFeedbackComponent, View, Image, TextInput, Button, ScrollView} from 'react-native';
 import {gstyles} from '../styles';
 import {TouchableWithoutFeedback} from "react-native";
 
@@ -14,7 +14,7 @@ export default function Survey({ nav }) {
     };
 
     return (
-        <View style={gstyles.container}>
+        <ScrollView contentContainerStyle={gstyles.container}>
             <Text style={gstyles.question}>Сова/жаворонок?</Text>
             <TextInput style={gstyles.input} onChangeText={OnChange} placeholder='Ответ'/>
             <Text style={gstyles.question}>Сколько времени нужен на отдых?</Text>
@@ -25,13 +25,9 @@ export default function Survey({ nav }) {
             <TextInput style={gstyles.input} onChangeText={OnChange} placeholder='Ответ'/>
             <Text style={gstyles.question}>Мера отвратительности</Text>
             <TextInput style={gstyles.input} onChangeText={OnChange} placeholder='Ответ'/>
-            <Text style={gstyles.question}>Вы гей?</Text>
-            <TextInput style={gstyles.input} onChangeText={OnChange} placeholder='Ответ'/>
-            <Text style={gstyles.question}>Вы учитесь на факи?</Text>
-            <TextInput style={gstyles.input} onChangeText={OnChange} placeholder='Ответ'/>
             <View style={gstyles.button}>
                 <Button color = "#F2C8A2" onPress={() => nav.navigate('Main')} title="Начать"/>
             </View>
-        </View>
+        </ScrollView>
     );
 }

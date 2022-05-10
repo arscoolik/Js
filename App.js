@@ -50,16 +50,16 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="Start" component={StartScreen} options={{  headerStyle: {
-                backgroundColor: '#B3E2E6', borderBottomWidth: 0,
+                backgroundColor: '#fff', borderBottomWidth: 0,
               } }}/>
             <Stack.Screen name="Registration" component={RegScreen} options={{ headerStyle: {
-                backgroundColor: '#B3E2E6',borderBottomWidth: 0,
+                backgroundColor: '#0abab5',borderBottomWidth: 0,
               } }}/>
             <Stack.Screen name="Survey" component={SurveyScreen} options={{headerStyle: {
-                backgroundColor: '#B3E2E6', borderBottomWidth: 0,
+                backgroundColor: '#D9BBA0', borderBottomWidth: 0,
               } }}/>
             <Stack.Screen name="Main" component={MainScreen} options={{headerBackVisible:false, headerStyle: {
-                backgroundColor: '#B3E2E6', borderBottomWidth: 0,
+                backgroundColor: '#D9BBA0', borderBottomWidth: 0,
               } }}/>
           </Stack.Navigator>
         </NavigationContainer>

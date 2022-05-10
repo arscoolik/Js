@@ -1,4 +1,4 @@
-import { StyleSheet} from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 
 export const gstyles = StyleSheet.create({
@@ -11,7 +11,7 @@ export const gstyles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: '#D9BBA0',
+        backgroundColor: '#fff',
         padding: '10%',
         alignItems: 'center',
         paddingTop: '15%',
@@ -35,7 +35,7 @@ export const gstyles = StyleSheet.create({
     },
     selector:{
         flex: 1,
-        backgroundColor: '#ccc8',
+        backgroundColor: '#032167',
         height: '100%',
         width: '12.5%',
         borderRadius: 100,
@@ -44,9 +44,9 @@ export const gstyles = StyleSheet.create({
     },
     logo:{
         alignSelf: 'center',
-        width: 250,
-        height: 250,
-        marginTop: '12%',
+        width: Platform.OS === 'ios' ? 250 : 175,
+        height: Platform.OS === 'ios' ? 250 : 175,
+        marginTop: '5%',
         marginBottom: 0,
     },
     button:{
@@ -112,16 +112,16 @@ export const gstyles = StyleSheet.create({
     paint:{
         position: 'absolute',
         alignSelf: 'center',
-        width: 600,
-        height: 650,
+        width: Platform.OS === 'ios' ? 600 : 550,
+        height: Platform.OS === 'ios' ? 650 : 600,
         marginBottom: '0%',
         opacity: 0.7,
-        top: '-5%'
+        top: Platform.OS === 'ios' ? '-5%' : '-7%',
     },
     paint2: {
         position: 'absolute',
         alignSelf: 'center',
-        top: "32%",
+        top: Platform.OS === 'ios' ? '32%' : '30%',
         width: 650,
         height: 650,
         marginBottom: '0%',
